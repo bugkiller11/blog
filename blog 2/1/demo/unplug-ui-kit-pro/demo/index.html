@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../src/css/unplug-ui-kit.css">
+    <link rel="stylesheet" href="assets/css/unplug-ui-kit-demo.css">
+    <link rel="stylesheet" href="../src/vendors/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+    <style>
+        .simg {
+            background-image: url("./assets/images/s5.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .active {
+            color: #f03c02;
+        }
+
+        /* 
+        .counter1 {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            height: 100vh;-------------------
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: #fff;
+        }
+
+        .containers {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .counterup {
+            width: 23%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+            padding: 20px 10px;
+            border: 2px solid rgb(0, 0, 0);
+            box-sizing: border-box;
+        }
+
+        .counterup .counter-text {
+            font-size: 55px;
+        }
+
+        .counterup .cpclc {
+            font-size: 23px;
+            text-transform: capitalize;
+        } */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        .counter_wrapper {
+            width: 100%;
+            background: #f9f9f9;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .counter_wrapper .count_box {
+            padding: 20px 15px;
+            /* border: 2px solid #dc4225; */
+            border-radius: 10px;
+            text-align: center
+        }
+
+        .counter_wrapper .count_box h3 {
+            font-size: 40px;
+            font-weight: 600;
+            color: #222;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            -ms-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s
+        }
+
+        .counter_wrapper .count_box h4 {
+            font-size: 15px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #313131;
+            padding-top: 8px;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            -ms-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s
+        }
+
+        .counter_wrapper .box_center {
+            /* background: linear-gradient(to bottom right, #16A085, #2c5f2d); */
+            background: linear-gradient(to bottom right, #16A085 0%, #2c5f2d 51%, #16A085 100%);
+            background-position: center 0;
+            background-size: cover
+        }
+
+        .counter_wrapper .box_center h3,
+        .counter_wrapper .box_center h4 {
+            color: #fff;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            -ms-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s
+        }
+
+        .counter_wrapper .box_hover:hover {
+            /* background: linear-gradient(to bottom right, #2c5f2d, #97bc62ff); */
+            background: linear-gradient(to bottom right, #16A085 0%, #2c5f2d 51%, #16A085 100%);
+            background-size: cover;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            transition: all .3s ease
+        }
+
+        .counter_wrapper .box_hover:hover h3,
+        .box_hover:hover h4 {
+            color: #fff
+        }
+
+        @media(max-width:768px) {
+            .counter_wrapper .col-md-4 {
+                margin-bottom: 15px
+            }
+        }
+    </style>
+</head>
+<header style="background-image: url('assets/images/s11.jpg')" class="product-landing-header header-with-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="/1/demo/unplug-ui-kit-pro/demo/index.html">
+                <img src="assets/images/s1.png" class="img-fluid" alt="Unplug UI"><b>SERIALBLOG</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#unplugNavbar"
+                aria-controls="demoNavbar6" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="unplugNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/1/demo/unplug-ui-kit-pro/demo/index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/6/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link"
+                            href="/4/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                        <button class="btn btn-danger"><a
+                                href="/9/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/register.html"
+                                style="color: white; text-decoration: none;"> Register</a></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header-content text-center">
+            <h6 class=" text-white text-tracking-wider pb-1 mb-3">LET'S CREATE BLOG WITH US....</h6>
+            <h1>OWN STYLE WITH </h1>
+            <p>SERIALCOM INFOTECH.</p>
+            <div class="text-center mt-4 pt-4">
+                <a href="#example-pages" class="btn btn-lg font-weight-semibold">Explore More</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+<main>
+    <section class="py-5" id="example-pages" style="background-color: #f7f7f7;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 py-3">
+                    <h2 class="h2 text-center font-weight-bold mt-3">“Keep Learning In The Moments That Matter.”</h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <section>
+        <div class="container">
+            <div class="row">
+                <h2 class="col-md-6"><b>TRADING BLOG</b></h2>
+
+                <br>
+                <h2 class="col-md-6"><b>MOST VIEW BLOG</b></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card border-0">
+                        <img src="assets/images/landing-2.jpg" class="card-img-top"
+                            alt="Starategic design and technology agency">
+                        <div class="card-body px-0">
+                            <p class="text-muted small">Type Something</p>
+                            <h3>Starategic design and technology agency</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore</p>
+                            <p><a href="#" class="text-info">Gladys Kanyinda</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-1">
+
+                    <div class="media pb-4 border-bottom">
+                        <div class="media-body">
+                            <p class="small text-gray mb-0">Rosie Arnold</p>
+                            <h5 class="mt-0 mb-1">Friday’s spring collection is out. Now you can read my report about
+                                it.
+                            </h5>
+                            <p class="mb-1 small"><a href="#" class="text-info">News</a></p>
+                            <p class="mb-0 small"><a href="#" class="text-gray">Read Story</a></p>
+                        </div>
+                        <img src="assets/images/landing-3.jpg" class="ml-3"
+                            alt="Friday’s spring collection is out. Now you can read my report about it.">
+                    </div>
+                    <div class="media py-4 border-bottom">
+                        <div class="media-body">
+                            <p class="small text-gray mb-0">Eric McLaughlin</p>
+                            <h5 class="mt-0 mb-1">Mary Steel is back in the fashion business—and she talked about her
+                                fresh
+                                start.</h5>
+                            <p class="mb-1 small"><a href="#" class="text-danger">Satrtups</a></p>
+                            <p class="mb-0 small"><a href="#" class="text-gray">Read Story</a></p>
+                        </div>
+                        <img src="assets/images/landing-4.jpg" class="ml-3"
+                            alt="Friday’s spring collection is out. Now you can read my report about it.">
+                    </div>
+                    <div class="media py-4">
+                        <div class="media-body">
+                            <p class="small text-gray mb-0">Irene Powers</p>
+                            <h5 class="mt-0 mb-1">Don’t want to miss the KEDZ fashion show in New York? Get all the
+                                facts
+                                here.</h5>
+                            <p class="mb-1 small"><a href="#" class="text-info">Design</a></p>
+                            <p class="mb-0 small"><a href="#" class="text-gray">Read Story</a></p>
+                        </div>
+                        <img src="assets/images/landing-5.jpg" class="ml-3"
+                            alt="Friday’s spring collection is out. Now you can read my report about it.">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="simg" id="example-pages" style="padding: 120px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 py-5">
+                    <h2 class="h2 text-center font-weight-bold mt-3 text-white">CODE IS LIFE</h2>
+                    <hr class="solid">
+                    <p class="text-center text-white">“Everyone in this country should learn how to program because it
+                        teaches you how to think”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="counter_wrapper">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count_box box_hover">
+                            <h3><span class="timer">2000</span>k+</h3>
+                            <h4 style="margin-bottom: 0px;">Total Blog</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count_box box_hover">
+                            <h3><span class="timer">1024</span>+</h3>
+                            <h4 style="margin-bottom: 0px;">READERS</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count_box box_hover">
+                            <h3><span class="timer">500</span>+</h3>
+                            <h4 style="margin-bottom: 0px;">Last Week Blog</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="count_box box_hover">
+                            <!-- Gridient Colore class :box_center -->
+                            <h3><span class="timer">1000</span>M+</h3>
+                            <h4 style="margin-bottom: 0px;">LIKEs</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- <section class="counter1">
+        <div class="containers">
+            <div class="main">
+                <div class="counterup">
+                    <h2 class="counter-text" data-number="130"></h2>
+                    <h3 class="cpclc">project complete</h3>
+                </div>
+                <div class="counterup">
+                    <h2 class="counter-text" data-number="110"></h2>
+                    <h3>our consultant</h3>
+                </div>
+                <div class="counterup">
+                    <h2 class="counter-text" data-number="221"></h2>
+                    <h3>work day</h3>
+                </div>
+                <div class="counterup">
+                    <h2 class="counter-text" data-number="85"></h2>
+                    <h3>happy people</h3>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <br>
+    <h2 class="h2 text-center font-weight-bold mt-3 text-dark"><b>LETEST POST</b></h2>
+    <hr class="solid">
+    <section class="up-subscribe" style="padding-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <ul class="nav col-lg-10" style="padding-bottom: 30px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">ALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">C-1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">C-2</a>
+                    </li>
+                </ul>
+                <h2 class="col-lg-2"><b>MY POST</b></h2>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card" style="border: 0px;">
+                        <img class="card-img-top" src="./assets/images/blog-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="border: 0px;">
+                        <img class="card-img-top" src="./assets/images/blog-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="border: 0px;">
+                        <img class="card-img-top" src="./assets/images/blog-1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="up-common-footer">
+    <!-- <div class="container">
+        <p class="text-center mb-0"><a style="color: #777979;" href="index.html" class="footer-brand"><img
+                    src="assets/images/s1.png" class="img-fluid" alt="Unplug UI"><b>SERIALBLOG</b></a></p>
+        <nav class="nav justify-content-center flex-column flex-sm-row text-center">
+            <a href="/1/demo/unplug-ui-kit-pro/demo/index.html" style="color: #777979;" class="nav-link">Home</a>
+            <a href="/6/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog.html" style="color: #777979;" class="nav-link">Blog</a> -->
+    <!-- <a href="about.html" class="nav-link">About Us</a> -->
+    <!-- <a href="/4/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/contact.html" style="color: #777979;" class="nav-link">Contact Us</a>
+        </nav> -->
+    <!-- <p class="text-center mb-0" style="color: #777979;"><strong>4-Ramnagar, beside Laxmi Enclave, near Gajera School, Katargam,</strong><br>
+            <strong>Surat-395004. | Phone: +91 98251 19218 | Email:&nbsp;contact@serialcominfotech.com</strong></p> -->
+    <!-- <p class="text-center mb-0" style="color: #777979;"><b>Copyright © 2022 SerialBlog</b></p>
+        <nav class="nav footer-social-nav justify-content-center" style="color: #777979;">
+            <a href="#" class="nav-link social-link-facebook"> <i class="mdi mdi-facebook"></i> </a>
+            <a href="https://www.linkedin.com/company/serialcom-infotech" class="nav-link social-link-linkedin"> <i
+                    class="mdi mdi-linkedin"></i> </a>
+            <a href="https://www.youtube.com/channel/UCk71Vr5eQdg4Ij5MPKKgl3Q" class="nav-link social-link-youtube"> <i
+                    class="mdi mdi-youtube"></i> </a>
+            <a href="https://www.instagram.com/serialcominfotech/" class="nav-link social-link-instagram"> <i
+                    class="mdi mdi-instagram"></i> </a>
+        </nav>
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <p class="text-center mb-0">
+                   <b style="color: #777979; font-size: 14px;">Copyright ©️2019 SerialCom Infotech. ALL RIGHTS RESERVED Designed by <a style="color: #777979; font-size: 11px;" href="index.html" class="footer-brand"> Serialcom Infotech</a></b></p>
+            </div>
+            <div class="col-lg-3">
+                <nav class="nav justify-content-center flex-column flex-sm-row text-center">
+                    <a href="/1/demo/unplug-ui-kit-pro/demo/index.html" style="color: #777979;"
+                        class="nav-link">Home</a>
+                    <a href="/6/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog.html" style="color: #777979;"
+                        class="nav-link">Blog</a>
+                    <!-- <a href="about.html" class="nav-link">About Us</a> -->
+                    <a href="/4/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/contact.html" style="color: #777979;"
+                        class="nav-link">Contact Us</a>
+                </nav>
+            </div>
+            <div class="col-lg-4">
+                <nav class="nav footer-social-nav justify-content-center" style="color: #777979;">
+                    <a href="#" class="nav-link social-link-facebook"> <i class="mdi mdi-facebook"></i> </a>
+                    <a href="https://www.linkedin.com/company/serialcom-infotech" class="nav-link social-link-linkedin">
+                        <i class="mdi mdi-linkedin"></i> </a>
+                    <a href="https://www.youtube.com/channel/UCk71Vr5eQdg4Ij5MPKKgl3Q"
+                        class="nav-link social-link-youtube"> <i class="mdi mdi-youtube"></i> </a>
+                    <a href="https://www.instagram.com/serialcominfotech/" class="nav-link social-link-instagram"> <i
+                            class="mdi mdi-instagram"></i> </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="../src/vendors/jquery/dist/jquery.min.js"></script>
+<script src="../src/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="../src/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/simple-ui-kit-demo.js"></script>
+<!-- <script>
+    let totalNumber = document.querySelectorAll('.counter-text');
+    let getNumber = Array.from(totalNumber)
+
+    getNumber.map((viewNumber) => {
+        console.log(viewNumber.dataset.number)
+        let startCount = 0
+        let counterUP = () => {
+            startCount++
+            viewNumber.innerHTML = `${startCount}`
+            if (startCount == viewNumber.dataset.number) {
+                clearInterval(countStop)
+            }
+        }
+        let countStop = setInterval(() => {
+            counterUP()
+        }, 13)
+    })
+</script> -->
+
+<script>
+    // Just added bootstrap v4.5 css
+    // You don't need any other library to run this counter
+    const animationDuration = 3000;
+
+    const frameDuration = 1000 / 60;
+
+    const totalFrames = Math.round(animationDuration / frameDuration);
+
+    const easeOutQuad = t => t * (2 - t);
+
+    const animateCountUp = el => {
+        let frame = 0;
+        const countTo = parseInt(el.innerHTML, 10);
+
+        const counter = setInterval(() => {
+            frame++;
+
+            const progress = easeOutQuad(frame / totalFrames);
+
+            const currentCount = Math.round(countTo * progress);
+
+
+            if (parseInt(el.innerHTML, 10) !== currentCount) {
+                el.innerHTML = currentCount;
+            }
+
+            if (frame === totalFrames) {
+                clearInterval(counter);
+            }
+        }, frameDuration);
+    };
+
+    const countupEls = document.querySelectorAll('.timer');
+    countupEls.forEach(animateCountUp);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../src/css/unplug-ui-kit.css">
+    <link rel="stylesheet" href="assets/css/unplug-ui-kit-demo.css">
+    <link rel="stylesheet" href="../src/vendors/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .improve {
+            position: relative;
+            width: 100%;
+        }
+
+        .cimex {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: relative;
+            /* top: 50%;
+            left: 45%; */
+            transform: translate(0px, -205px);
+            text-align: center;
+        }
+
+        .improve:hover .cimex {
+            opacity: 0.3;
+        }
+
+        .improve:hover .middle {
+            opacity: 1;
+        }
+
+        .text123 {
+            color: black;
+            /* font-size: 16px; */
+            /* padding: 160px 20px; */
+        }
+
+        .card-body {
+            padding: 0px 2.25rem;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .improve {
+                position: relative;
+                width: 100%;
+            }
+
+            .cimex {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: relative;
+                transform: translate(0px, -125px);
+                text-align: center;
+            }
+
+            .improve:hover .cimex {
+                opacity: 0.3;
+            }
+
+            .improve:hover .middle {
+                opacity: 1;
+            }
+
+            .text123 {
+                color: black;
+            }
+        }
+
+
+
+        /* ******************************* */
+        /* @media screen and (max-width: 700px) {
+            body {
+                padding: 170px 0 0 0;
+                width: 100%
+            }
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .menu-item,
+        .menu-open-button {
+            background: #EEEEEE;
+            border-radius: 100%;
+            width: 50px;
+            height: 50px;
+            margin-left: -40px;
+            position: absolute;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 55px;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            -webkit-transition: -webkit-transform ease-out 200ms;
+            transition: -webkit-transform ease-out 200ms;
+            transition: transform ease-out 200ms;
+            transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+        }
+
+        .menu-open {
+            display: none;
+        }
+
+        .menu {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 26px;
+        }
+
+        .share-icon {
+            color: #596778;
+            background color ------------------------------------
+        }
+
+        .menu-item:hover {
+            background: #EEEEEE;
+            color: #3290B1;
+        }
+
+        .menu-item:nth-child(3) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(4) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(5) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(6) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(7) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(8) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-item:nth-child(9) {
+            -webkit-transition-duration: 180ms;
+            transition-duration: 180ms;
+        }
+
+        .menu-open-button {
+            z-index: 2;
+            -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+            -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+            transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+            cursor: pointer;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+        }
+
+        .menu-open-button:hover {
+            -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+            transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+        }
+
+        .menu-open:checked+.menu-open-button {
+            -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+            -webkit-transition-duration: 200ms;
+            transition-duration: 200ms;
+            -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+            transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+        }
+
+        .menu-open:checked~.menu-item {
+            -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+            transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(3) {
+            transition-duration: 180ms;
+            -webkit-transition-duration: 180ms;
+            -webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+            transform: translate3d(0.08361px, -104.99997px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(4) {
+            transition-duration: 280ms;
+            -webkit-transition-duration: 280ms;
+            -webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+            transform: translate3d(90.9466px, -52.47586px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(5) {
+            transition-duration: 380ms;
+            -webkit-transition-duration: 380ms;
+            -webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+            transform: translate3d(90.9466px, 52.47586px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(6) {
+            transition-duration: 480ms;
+            -webkit-transition-duration: 480ms;
+            -webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+            transform: translate3d(0.08361px, 104.99997px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(7) {
+            transition-duration: 580ms;
+            -webkit-transition-duration: 580ms;
+            -webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+            transform: translate3d(-90.86291px, 52.62064px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(8) {
+            transition-duration: 680ms;
+            -webkit-transition-duration: 680ms;
+            -webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+            transform: translate3d(-91.03006px, -52.33095px, 0);
+        }
+
+        .menu-open:checked~.menu-item:nth-child(9) {
+            transition-duration: 780ms;
+            -webkit-transition-duration: 780ms;
+            -webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+            transform: translate3d(-0.25084px, -104.9997px, 0);
+        }
+
+        .facebook_share_btn {
+            background-color: #3b5998;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .facebook_share_btn:hover {
+            color: #3b5998;
+            text-shadow: none;
+        }
+
+        .twitter_share_btn {
+            background-color: #00aced;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .twitter_share_btn:hover {
+            color: #00aced;
+            text-shadow: none;
+        }
+
+        .google_plus_share_btn {
+            background-color: #dd4b39;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .google_plus_share_btn:hover {
+            color: #dd4b39;
+            text-shadow: none;
+        }
+
+        .youtube_share_btn {
+            background-color: #bb0000;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .youtube_share_btn:hover {
+            color: #bb0000;
+            text-shadow: none;
+        }
+
+        .pinterest_share_btn {
+            background-color: #cb2027;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .pinterest_share_btn:hover {
+            color: #cb2027;
+            text-shadow: none;
+        }
+
+        .tumblr_share_btn {
+            background-color: #32506d;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .tumblr_share_btn:hover {
+            color: #32506d;
+            text-shadow: none;
+        }
+
+        redesigner-------------------------------------
+
+        .redesigner {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .redesigner a:nth-child(1) {
+            text-decoration: none;
+            transition: all 0.5s;
+        }
+
+        .redesigner a:nth-child(1):hover {
+            text-decoration: none;
+            letter-spacing: 5px;
+            transition: all 0.5s;
+        }
+
+        .redesigner a:nth-child(3) {
+            letter-spacing: normal;
+            font-size: 10px;
+            text-decoration: none;
+        }
+
+        .redesigner a:nth-child(3):hover {
+            text-decoration: none;
+        } */
+
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            color: rgb(0, 0, 0);
+        }
+
+        .footer-note p {
+            line-height: 2em;
+        }
+
+        .footer-note a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            transition: all 0.2s ease;
+        }
+
+        .footer-note a:hover {
+            color: #444;
+            border-color: #aaa;
+        }
+
+        .footer-note i {
+            margin: 0 0 0 2px;
+            color: #f95a54;
+        }
+
+        .container12 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            /* float: center; */
+            /* margin: 0 0 88px; */
+        }
+
+        .trigger {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: color 0.2s, border 0.2s;
+        }
+
+        .trigger a {
+            color: currentColor;
+            text-decoration: none;
+            transform: skew(10deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trigger i {
+            font-size: 14px;
+            line-height: 40px;
+        }
+
+        .trigger:hover {
+            color: #2c2c2c;
+            border-color: #2c2c2c !important;
+        }
+
+        .trigger.share-btn i {
+            margin: 0 5px 0 0;
+        }
+
+        .like,
+        .share {
+            transform: skew(-10deg);
+            margin: 0 0 0 10px;
+        }
+
+        .like .trigger,
+        .share .trigger {
+            width: 82px;
+            border: 1px solid rgba(44, 44, 44, .3);
+        }
+
+        .like i,
+        .share i {
+            margin: 0 5px 0 0;
+        }
+
+        @media only screen and (min-width: 601px) {
+            /* .share {
+                display: none;
+                transform: skew(-10deg);
+                overflow: hidden;
+            } */
+        }
+
+        .share-window {
+            transform: skew(-10deg);
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* .share-window {
+                display: none;
+            } */
+            .share-bar {
+                position: relative;
+                width: 82px;
+                height: 40px;
+                transition: width 0.4s ease 0.2s;
+            }
+
+            .share-bar:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgba(44, 44, 44, .3) rgba(44, 44, 44, .3) rgba(44, 44, 44, .3) transparent;
+            }
+
+            .share-bar:hover {
+                width: 247px;
+                transition: width 0.4s ease;
+            }
+
+            .share-bar:hover .trigger:nth-child(3) {
+                left: 82px;
+                transition: left 0.45s ease 0.06s, color 0.2s, border 0.2s;
+            }
+
+            .share-bar:hover .trigger:nth-child(4) {
+                left: 123px;
+                transition: left 0.45s ease 0.12s, color 0.2s, border 0.2s;
+            }
+
+            .share-bar:hover .trigger:nth-child(5) {
+                left: 164px;
+                transition: left 0.45s ease 0.18s, color 0.2s, border 0.2s;
+            }
+
+            .share-bar:hover .trigger:nth-child(6) {
+                left: 205px;
+                transition: left 0.45s ease 0.24s, color 0.2s, border 0.2s;
+            }
+
+            .share-bar .trigger {
+                position: absolute;
+                top: 0;
+                width: 42px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: transparent transparent transparent rgba(44, 44, 44, .3);
+                transition: left 0s ease 0.45s, color 0.2s, border 0.2s;
+            }
+
+            .share-bar .trigger:nth-child(1) {
+                left: 0;
+            }
+
+            .share-bar .trigger:nth-child(2) {
+                left: 41px;
+            }
+
+            .share-bar .trigger:nth-child(3) {
+                left: 102px;
+            }
+
+            .share-bar .trigger:nth-child(4) {
+                left: 143px;
+            }
+
+            .share-bar .trigger:nth-child(5) {
+                left: 184px;
+            }
+
+            .share-bar .trigger:nth-child(6) {
+                left: 225px;
+            }
+        }
+
+        .share-bar {
+            position: relative;
+            width: 82px;
+            height: 40px;
+            transition: width 0.4s ease 0.2s;
+        }
+
+        .share-bar:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba(44, 44, 44, .3) rgba(44, 44, 44, .3) rgba(44, 44, 44, .3) transparent;
+        }
+
+        .share-bar:hover {
+            width: 247px;
+            transition: width 0.4s ease;
+        }
+
+        .share-bar:hover .trigger:nth-child(3) {
+            left: 82px;
+            transition: left 0.45s ease 0.06s, color 0.2s, border 0.2s;
+        }
+
+        .share-bar:hover .trigger:nth-child(4) {
+            left: 123px;
+            transition: left 0.45s ease 0.12s, color 0.2s, border 0.2s;
+        }
+
+        .share-bar:hover .trigger:nth-child(5) {
+            left: 164px;
+            transition: left 0.45s ease 0.18s, color 0.2s, border 0.2s;
+        }
+
+        .share-bar:hover .trigger:nth-child(6) {
+            left: 205px;
+            transition: left 0.45s ease 0.24s, color 0.2s, border 0.2s;
+        }
+
+        .share-bar .trigger {
+            position: absolute;
+            top: 0;
+            width: 42px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(44, 44, 44, .3);
+            transition: left 0s ease 0.45s, color 0.2s, border 0.2s;
+        }
+
+        .share-bar .trigger:nth-child(1) {
+            left: 0;
+        }
+
+        .share-bar .trigger:nth-child(2) {
+            left: 41px;
+        }
+
+        .share-bar .trigger:nth-child(3) {
+            left: 102px;
+        }
+
+        .share-bar .trigger:nth-child(4) {
+            left: 143px;
+        }
+
+        .share-bar .trigger:nth-child(5) {
+            left: 184px;
+        }
+
+        .share-bar .trigger:nth-child(6) {
+            left: 225px;
+        }
+
+        /* ******************************* */
+    </style>
+</head>
+
+<body>
+    <header style="background-image: url('assets/images/b5.jpg')" class="product-landing-header header-with-bg">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="/1/demo/unplug-ui-kit-pro/demo/index.html"><img src="assets/images/s1.png"
+                        class="img-fluid" alt="Unplug UI"><b>SERIALBLOG</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#unplugNavbar"
+                    aria-controls="demoNavbar6" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="unplugNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/1/demo/unplug-ui-kit-pro/demo/index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                                href="/6/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                                href="/4/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item active">
+                            <button class="btn btn-danger"><a
+                                    href="/9/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/register.html"
+                                    style="color: white; text-decoration: none;"> Register</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="page-head text-center">
+            <div class="container">
+                <h1 class="text-center font-weight-bold" style="color: white;">BLOG POST</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="/1/demo/unplug-ui-kit-pro/demo/index.html"
+                                style="color: white;"><b>Home</b></a></li>
+                        <li class="breadcrumb-item" style="color: white;"> > </li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: white;">Blog</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main>
+        <section class="blog-contnet-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <article class="card mb-5">
+                            <div class="improve">
+                                <img src="assets/images/blog-1.jpg" alt="What are your user needs?"
+                                    class="card-img-top cimex">
+                                <div class="middle">
+                                    <div class="text123">
+                                        <h3>What are your user needs?</h3>
+                                    </div>
+                                    <!-- ****************************************************** -->
+                                    <!-- <nav class="menu" style="margin-top: 50px;">
+                                        <input type="checkbox" href="#" class="menu-open" name="menu-open"
+                                            id="menu-open" />
+                                        <label class="menu-open-button" for="menu-open">
+                                            <i class="fa fa-share-alt share-icon"></i>
+                                        </label>
+                                        <a href="https://www.facebook.com" target="_blank"
+                                            class="menu-item facebook_share_btn">
+                                            <i class="fa fa-facebook"></i> </a>
+                                        <a href="https://www.twitter.com" target="_blank"
+                                            class="menu-item twitter_share_btn">
+                                            <i class="fa fa-twitter"></i> </a>
+                                        <a href="https://www.pinterest.com" target="_blank"
+                                            class="menu-item pinterest_share_btn"> <i class="fa fa-pinterest"></i> </a>
+                                        <a href="https://www.youtube.com" target="_blank"
+                                            class="menu-item youtube_share_btn">
+                                            <i class="fa fa-youtube"></i> </a>
+                                        <a href="https://www.tumblr.com" target="_blank"
+                                            class="menu-item tumblr_share_btn"> <i class="fa fa-tumblr"></i> </a>
+                                        <a href="https://plus.google.com" target="_blank"
+                                            class="menu-item google_plus_share_btn"> <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </nav> -->
+
+                                    <div class="container12">
+                                        <div class="share-window">
+                                            <div class="share-bar">
+                                                <div class="trigger"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-twitter"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-whatsapp"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fas fa-paper-plane"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="share">
+                                            <div class="trigger share-btn"><a href="#"><i class="fas fa-plus"></i> Share
+                                            <div class="share-window">
+                                            <div class="share-bar">
+                                                <div class="trigger"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-twitter"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fab fa-whatsapp"></i></a>
+                                                </div>
+                                                <div class="trigger"><a href="#"><i class="fas fa-paper-plane"></i></a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </a>
+                                            </div>
+                                        </div> -->
+                                        <div class="like">
+                                            <div class="trigger like-btn"><a href="#"><i class="fas fa-heart"></i>
+                                                    Like</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ********************************* -->
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 d-sm-flex align-items-center">
+                                    <div class="d-flex d-sm-block">
+                                        <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html"
+                                            class="text-primary font-weight-medium">Business</a>
+                                        <span class="text-gray ml-sm-2 d-sm-inline ml-auto">29th November</span>
+                                    </div>
+                                    <div class="author ml-auto d-flex mt-3 mb-4 my-sm-0  align-items-center">
+                                        <div class="avatar avatar-rounded avatar-sm mr-3">
+                                            <img src="assets/images/face/Face_5.png" alt="author">
+                                        </div>
+                                        <span class="text-gray">By Oea Romana</span>
+                                    </div>
+                                </div>
+                                <!-- <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html">
+                                    <h3>What are your user needs?</h3> -->
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+                                    Fusce pellentesque faucibus lorem at viverra. Integer</p>
+                            </div>
+
+                        </article>
+                        <article class="card mb-5">
+                            <div class="improve">
+                                <img src="assets/images/blog-2.jpg" alt="What are your user needs?"
+                                    class="card-img-top cimex">
+                                <div class="middle">
+                                    <div class="text123">
+                                        <h3>What are your user needs?</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 d-sm-flex align-items-center">
+                                    <div class="d-flex d-sm-block">
+                                        <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html"
+                                            class="text-primary font-weight-medium">Business</a>
+                                        <span class="text-gray ml-sm-2 d-sm-inline ml-auto">29th November</span>
+                                    </div>
+                                    <div class="author ml-auto d-flex mt-3 mb-4 my-sm-0  align-items-center">
+                                        <div class="avatar avatar-rounded avatar-sm mr-3">
+                                            <img src="assets/images/face/Face_5.png" alt="author">
+                                        </div>
+                                        <span class="text-gray">By Oea Romana</span>
+                                    </div>
+                                </div>
+                                <!-- <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html">
+                                    <h3>What are your user needs?</h3>
+                                </a> -->
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+                                    Fusce pellentesque faucibus lorem at viverra. Integer</p>
+                            </div>
+                        </article>
+                        <article class="card mb-5">
+                            <div class="improve">
+                                <img src="assets/images/blog-3.jpg" alt="What are your user needs?"
+                                    class="card-img-top cimex">
+                                <div class="middle">
+                                    <div class="text123">
+                                        <h3>What are your user needs?</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <img src="assets/images/blog-3.jpg" alt="zWhat is the problem you are trying to solve?"
+                                class="card-img-top"> -->
+                            <div class="card-body">
+                                <div class="mb-3 d-sm-flex align-items-center">
+                                    <div class="d-flex d-sm-block">
+                                        <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html"
+                                            class="text-primary font-weight-medium">Business</a>
+                                        <span class="text-gray ml-sm-2 d-sm-inline ml-auto">29th November</span>
+                                    </div>
+                                    <div class="author ml-auto d-flex mt-3 mb-4 my-sm-0 align-items-center">
+                                        <div class="avatar avatar-rounded avatar-sm mr-3">
+                                            <img src="assets/images/face/Face_5.png" alt="author">
+                                        </div>
+                                        <span class="text-gray">By Oea Romana</span>
+                                    </div>
+                                </div>
+                                <!-- <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html">
+                                    <h3>What are your user needs?</h3> -->
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+                                    Fusce pellentesque faucibus lorem at viverra. Integer</p>
+                            </div>
+                        </article>
+                        <article class="card mb-5">
+                            <!-- <img src="assets/images/blog-4.jpg" alt="Doom and Bloom: The Growing Millennial"
+                                class="card-img-top"> -->
+                            <div class="improve">
+                                <img src="assets/images/blog-2.jpg" alt="What are your user needs?"
+                                    class="card-img-top cimex">
+                                <div class="middle">
+                                    <div class="text123">
+                                        <h3>What are your user needs?</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 d-sm-flex align-items-center">
+                                    <div class="d-flex d-sm-block">
+                                        <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html"
+                                            class="text-primary font-weight-medium">Business</a>
+                                        <span class="text-gray ml-sm-2 d-sm-inline ml-auto">29th November</span>
+                                    </div>
+                                    <div class="author ml-auto d-flex mt-3 mb-4 my-sm-0  align-items-center">
+                                        <div class="avatar avatar-rounded avatar-sm mr-3">
+                                            <img src="assets/images/face/Face_5.png" alt="author">
+                                        </div>
+                                        <span class="text-gray">By Oea Romana</span>
+                                    </div>
+                                </div>
+                                <!-- <a href="/3/bootstrapdash.com/demo/unplug-ui-kit-pro/demo/blog-post.html">
+                                    <h3>What are your user needs?</h3> -->
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+                                    Fusce pellentesque faucibus lorem at viverra. Integer</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <nav class="navbar navbar-light bg-transparent">
+                                    <form class="form-inline pt-4">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0"
+                                            type="submit">Search</button>
+                                    </form>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h3 class="py-4 border-bottom">Recent Posts</h3>
+
+                                <ul class="list-unstyled">
+                                    <li class="media pt-4 pb-3 border-bottom d-md-block d-lg-flex">
+                                        <img src="assets/images/blog-widget-1.jpg" class="mr-3"
+                                            alt="This 10-Minute Routine Will Increase Your " width="68">
+                                        <div class="media-body">
+                                            <p class="small text-gray mb-1 mt-md-3 mt-lg-0">16 Dec 2019</p>
+                                            <h6 class="mt-0 mb-1">This 10-Minute Routine Will Your </h6>
+                                        </div>
+                                    </li>
+                                    <li class="media py-3 border-bottom d-md-block d-lg-flex">
+                                        <img src="assets/images/blog-widget-2.jpg" class="mr-3"
+                                            alt="This 10-Minute Routine Will Your " width="68">
+                                        <div class="media-body">
+                                            <p class="small text-gray mb-1 mt-md-3 mt-lg-0">07 Jun 2019</p>
+                                            <h6 class="mt-0 mb-1">This 10-Minute Routine Will Your </h6>
+                                        </div>
+                                    </li>
+                                    <li class="media py-3 border-bottom d-md-block d-lg-flex">
+                                        <img src="assets/images/blog-widget-3.jpg" class="mr-3"
+                                            alt="This 10-Minute Routine Will ncrease Your " width="68">
+                                        <div class="media-body">
+                                            <p class="small text-gray mb-1 mt-md-3 mt-lg-0">05 Oct 2019</p>
+                                            <h6 class="mt-0 mb-1">This 10-Minute Routine Will Your </h6>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="py-4 border-bottom">Categories</h3>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item pt-3 px-0">
+                                        <h6>Business (5)</h6>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <h6>Community (3)</h6>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <h6>Albums (1)</h6>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <h6>Project</h6>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="py-4 mb-4 border-bottom">Popular tags</h3>
+
+                                <div>
+                                    <a href="#!" class="tag">Technology</a>
+                                    <a href="#!" class="tag">Analysis</a>
+                                    <a href="#!" class="tag">Bootstrap</a>
+                                    <a href="#!" class="tag">Ecommerce</a>
+                                    <a href="#!" class="tag">Html</a>
+                                    <a href="#!" class="tag">Blog design</a>
+                                    <a href="#!" class="tag">Ecommerce</a>
+                                    <a href="#!" class="tag">Html</a>
+                                    <a href="#!" class="tag">Blog design</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="py-4 mb-4 border-bottom">Youtube</h3>
+                                <iframe height="200" width="276"
+                                    src="https://www.youtube.com/embed/HU7n91DIeHQ?autoplay=1&mute=1"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="up-common-footer">
+        <div class="container">
+            <p class="text-center mb-0"><a style="color: #777979; margin-bottom: 0px;" href="index.html"
+                    class="footer-brand"><img src="assets/images/s1.png" class="img-fluid" alt="Unplug UI"><b>
+                        SERIALBLOG</b></a></p>
+        </div>
+    </footer>
+    <script src="../src/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../src/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../src/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        const share = document.querySelector(".share");
+
+        setTimeout(() => {
+            share.classList.add("hover");
+        }, 1000);
+
+        setTimeout(() => {
+            share.classList.remove("hover");
+        }, 3000);
+    </script>
+</body>
+
+</html>
